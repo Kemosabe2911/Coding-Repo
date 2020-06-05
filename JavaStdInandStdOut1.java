@@ -1,5 +1,18 @@
 import java.util.*;
+/*
+Sample Input
 
+42
+100
+125
+
+Sample Output
+
+42
+100
+125
+
+*/
 public class Solution {
 
     public static void main(String[] args) {
