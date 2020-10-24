@@ -3,7 +3,7 @@
 using namespace std;
 
 int largest(int a[], int n){
-    int large=0;
+    int large=0,pos;
     for(int i=0; i<n; i++){
         if(a[i]>large){
             large=a[i];
