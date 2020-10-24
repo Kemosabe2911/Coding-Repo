@@ -24,6 +24,19 @@ int main(){
         arr[0][j]=1;
         vis[j]=1;
     }
-
+    int k=1;
+    while(1){
+        for(i=0;i<t;i++){
+            arr[k][i]=arr[k-1][i];
+            rightrot(arr[k],t);
+        }
+        break;
+    }
+    for(i=0;i<t;i++){
+        for(j=0;j<t;j++){
+            cout<<arr[i][j];
+        }
+    cout<<"\n";
+    }
     return 0;
 }
