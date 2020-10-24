@@ -1,11 +1,13 @@
 #include<iostream>
 using namespace std;
+ 
 
 int main(){
     int n,m;
     int inr[100][100],adj[100][100];
-    int q,s[100][100];
-    int a,b;
+    int q,s[100][100],out[100][100];
+    int a,b,temp;
+    int c=2;
     cin>>n>>m;
     for(int i=0;i<n;i++){
         for(int j=0;j<n;j++){
@@ -32,6 +34,15 @@ int main(){
             cin>>s[i][j];
         }
     }
-
+    for(i=0;i<q;i++){
+        a=s[i][0];
+        b=s[i][1];
+        if(a>b){
+            temp=a;
+            a=b;
+            b=temp;
+        }
+        
+    }
     return 0;
 }
