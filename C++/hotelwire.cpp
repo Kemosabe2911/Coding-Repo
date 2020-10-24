@@ -10,7 +10,7 @@ int main(){
         cin>>a[i];
     }
     for(i=0;i<k;i++){
-        small=999;
+        //small=999;
         for(j=0;j<m;j++){
             if(small>a[j]){
                 small=a[j];
