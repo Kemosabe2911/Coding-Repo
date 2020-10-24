@@ -10,8 +10,20 @@ void rightrot(int a[], int n){
 }
 
 int main(){
-
-
+    int n,t;
+    int arr[100][100];
+    int vis[100];
+    int i,j;
+    cin>>n>>t;
+    for(i=0;i<t;i++){
+        arr[0][i]=0;
+        vis[i]=0;
+    }
+    for(i=0;i<n;i++){
+        cin>>j;
+        arr[0][j]=1;
+        vis[j]=1;
+    }
 
     return 0;
 }
