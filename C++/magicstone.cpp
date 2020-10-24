@@ -1,4 +1,6 @@
 #include<iostream>
+#include <bits/stdc++.h>
+#include <algorithm>
 using namespace std;
 
 int countPairs(int arr[], int n) 
@@ -36,6 +38,7 @@ int main(){
     for(i=0;i<q;i++){
         for(p=0;p<temp;p++){
             a[p]=val[p];
+            cout<<a[p];
         }
         temp2=countPairs(a,temp);
         if(temp2==0){
