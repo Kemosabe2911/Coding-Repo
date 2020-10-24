@@ -85,14 +85,22 @@ int main()
     // Create a graph given in the above diagram 
     int n,m;
     int q;
+    int i;
+    int a,b;
     cin>>n>>m;
-    Graph g(n); 
+    Graph g(n);
+    for(i=0;i<m;i++){
+        cin>>a>>b;
+        g.addEdge(a,b);
+        g.addEdge(b,a);
+    } 
+    /*
     g.addEdge(0, 1); 
     g.addEdge(0, 2); 
     g.addEdge(0, 3); 
     g.addEdge(2, 0); 
     g.addEdge(2, 1); 
-    g.addEdge(1, 3); 
+    g.addEdge(1, 3); */
   
     int s = 2, d = 3; 
     cout << "Following are all different paths from " << s << " to " << d << endl; 
