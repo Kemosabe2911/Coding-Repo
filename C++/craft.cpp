@@ -15,6 +15,7 @@ int largest(int a[], int n){
 
 int main(){
     int c,n,p,w;
+    int l;
     cin>>c>>n>>p>>w;
     int i,temp;
     int count=0;
@@ -29,13 +30,36 @@ int main(){
             w=w-p;
         }
         i++;
+        l=i;
     }
+    int size=l;
     /*for(i=0;i<n;i++){
         cout<<a[i]<<"\n";
     }*/
-    if(w<c){
-        cout<<"0";
+    while (1)
+    {
+        /* code */
+        if(c>a[l-1]){
+            if(a[l-2]>(c-a[l-1])){
+                a[l-2]=a[l-2]-(c-a[l-1]);
+                a[l-1]=0;
+                count++;
+            }
+            l--;
+        }
+        else
+        {
+            break;
+        }
+        
+        /*for(i=0;i<size;i++){
+            if(a[i]==0){
+                a[i]=-1;
+            }
+        }*/
     }
+    cout<<count;
+    
     
 
     return 0;
