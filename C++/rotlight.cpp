@@ -2,7 +2,10 @@
 using namespace std;
 
 void rightrot(int a[], int n){
-    int temp=a[n-1],i;
+    int temp,i,j;
+    for(j=0;j<n;j++){
+
+    }
     for(i=0;i<n;i++){
         a[i+1]=a[i];
     }
@@ -10,7 +13,8 @@ void rightrot(int a[], int n){
 }
 
 int main(){
-    int n,t;
+    int n,t,p;
+    int temp;
     int arr[100][100];
     int vis[100];
     int i,j;
@@ -28,9 +32,19 @@ int main(){
     while(1){
         for(i=0;i<t;i++){
             arr[k][i]=arr[k-1][i];
-            rightrot(arr[k],t);
+            //rightrot(arr[k],t);
         }
-        break;
+        for(p=0;p<k;p++){
+            temp=arr[k][t-1];
+            for(i=0;i<n;i++){
+                arr[k][i+1]=arr[k][i];
+            }
+            arr[k][0]=temp;
+        }
+        k++;
+        if(k==t){
+            break;
+        }
     }
     for(i=0;i<t;i++){
         for(j=0;j<t;j++){
