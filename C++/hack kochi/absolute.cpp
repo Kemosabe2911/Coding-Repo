@@ -34,6 +34,11 @@ int main() {
                     small=diff;
                 }
                 if(small == diff){
+                    if(p[c] == a[i]){
+                        if(q[b] == a[j]){
+                            continue;
+                        }
+                    }
                     c++;
                     b++;
                     p[c]=a[i];
@@ -42,7 +47,7 @@ int main() {
             }
         }
     }
-    for(i=0;i<=c;i++){
+    for(i=c;i>=0;i--){
         cout<< p[i] << " "<< q[i] << " ";
     }
     return 0;
