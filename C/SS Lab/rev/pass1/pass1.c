@@ -2,9 +2,9 @@
 #include<stdlib.h>
 #include<string.h>
 void main(){
-    int locc,flag=0;
+    int locc,flag=0,sa;
     char first[20],second[20],third[20],opfirst[20],opsecond[20];
-    FILE *input,*symtab,*optab,*inter;
+    FILE *input,*symtab,*optab,*inter,*length;
     input=fopen("input.txt","r");
     symtab=fopen("symtab.txt","w+");
     inter=fopen("inter.txt","w+");
@@ -14,6 +14,7 @@ void main(){
     }
     else
         locc=0;
+    sa=locc;
     fprintf(inter,"%s\t%s\t%s\t%s\n","-",first,second,third);
     fscanf(input,"%s%s%s",first,second,third);
     while (strcmp(second,"END")!=0)
@@ -47,6 +48,9 @@ void main(){
         flag=0;
     }
     fprintf(inter,"%d\t%s\t%s\t%s\n",locc,first,second,third);
+    length=fopen("length.txt","w+");
+    fprintf(length,"%d",locc-sa);
+    fclose(length);
     fclose(input);
     fclose(optab);
     fclose(inter);
