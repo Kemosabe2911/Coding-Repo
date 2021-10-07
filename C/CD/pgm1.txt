@@ -1,0 +1,9 @@
+void main(){
+    int a, b, c;
+    a = 2;
+    b = 3;
+    c = b
+    if(a>b)
+    c = a;
+    printf(c)
+}
